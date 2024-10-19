@@ -9,58 +9,31 @@
 <body>
 
 <div class="sages-header">
-    <h1>Sages Page</h1>
+    <h1>Sages</h1>
 </div>
 
-<div class="sages-professors">
-    <div class="sages-professor" onclick="showProjects('professor1')">
-        <img src="./Images/Avinash.jpg" alt="Professor 1">
+<!-- Professor List -->
+<div class="sages-professors" id="sages-professors">
+    <div class="sages-professor" onclick="showProfessor('professor1', 'Avinash')">
+        <img src="./Images/Avinash.jpg" alt="Avinash">
         <p>Avinash</p>
     </div>
-    <div class="sages-professor" onclick="showProjects('professor2')">
-        <img src="./Images/Bhanukiran.jpg" alt="Professor 2">
+    <div class="sages-professor" onclick="showProfessor('professor2', 'Bhanukiran')">
+        <img src="./Images/Bhanukiran.jpg" alt="Bhanukiran">
         <p>Bhanukiran</p>
     </div>
-    <div class="sages-professor" onclick="showProjects('professor2')">
-        <img src="./Images/NidhiGoyal.jpg" alt="Professor 2">
+    <div class="sages-professor" onclick="showProfessor('professor3', 'Nidhi Goyal')">
+        <img src="./Images/NidhiGoyal.jpg" alt="Nidhi Goyal">
         <p>Nidhi Goyal</p>
     </div>
-    <div class="sages-professor" onclick="showProjects('professor2')">
-        <img src="./Images/Prafulla.jpg" alt="Professor 2">
+    <div class="sages-professor" onclick="showProfessor('professor4', 'Prafulla')">
+        <img src="./Images/Prafulla.jpg" alt="Prafulla">
         <p>Prafulla</p>
     </div>
     <!-- Add more professors as needed -->
 </div>
 
-<div class="projects-container" id="projects-container" style="display: none;">
-    <div class="project">
-        <img src="project1.jpg" alt="Project 1">
-        <h3>Project Title 1</h3>
-        <p>Description of project 1.</p>
-        <button>Interested?</button>
-    </div>
-    <div class="project">
-        <img src="project2.jpg" alt="Project 2">
-        <h3>Project Title 2</h3>
-        <p>Description of project 2.</p>
-        <button>Interested?</button>
-    </div>
-    <div class="project">
-        <img src="project3.jpg" alt="Project 3">
-        <h3>Project Title 3</h3>
-        <p>Description of project 3.</p>
-        <button>Interested?</button>
-    </div>
-    <div class="project">
-        <img src="project4.jpg" alt="Project 4">
-        <h3>Project Title 4</h3>
-        <p>Description of project 4.</p>
-        <button>Interested?</button>
-    </div>
-    <!-- Add more projects as needed -->
-</div>
-
-
+<!-- Projects Container -->
 <div class="projects-container" id="projects-container" style="display: none;">
     <div class="project">
         <img src="project1.jpg" alt="Project 1">
@@ -76,14 +49,43 @@
     </div>
     <!-- Add more projects as needed -->
 </div>
+
+<!-- Back button -->
+<button id="back-button" onclick="resetView()" style="display: none;">← Back to Professors</button>
 
 <script>
-    function showProjects(professorId) {
+    function showProfessor(professorId, professorName) {
+        const professors = document.getElementById('sages-professors');
         const projectsContainer = document.getElementById('projects-container');
+        const backButton = document.getElementById('back-button');
+        
+        // Hide all professors except the selected one
+        professors.classList.add('fade-out');
+        const selectedProfessor = professors.querySelector(`[onclick="showProfessor('${professorId}', '${professorName}')"]`);
+        selectedProfessor.classList.add('centered');
+        
+        // Show the projects
         projectsContainer.style.display = 'block';
+        backButton.style.display = 'block';
+    }
 
-        // Optionally, you can customize which projects to show based on the professorId
+    function resetView() {
+        const professors = document.getElementById('sages-professors');
+        const projectsContainer = document.getElementById('projects-container');
+        const backButton = document.getElementById('back-button');
+
+        // Show all professors and reset their position
+        professors.classList.remove('fade-out');
+        const selectedProfessor = professors.querySelector('.centered');
+        if (selectedProfessor) {
+            selectedProfessor.classList.remove('centered');
+        }
+        
+        // Hide projects and back button
+        projectsContainer.style.display = 'none';
+        backButton.style.display = 'none';
     }
 </script>
+
 </body>
 </html>
