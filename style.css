@@ -1,125 +1,166 @@
-/* General styles */
+/* General styling */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  body {
-    background-color: #f5f5f5;
-    color: #333;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    border-bottom: 2px solid #ddd;
-  }
-  
-  .navbar h1 {
-    font-size: 24px;
-    margin-left: 10px;
-  }
-  
-  .navbar-left, .navbar-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .hamburger {
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .theme-toggle {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    margin-right: 20px;
-  }
-  
-  .theme-toggle .light {
-    margin-right: 5px;
-    font-size: 20px;
-  }
-  
-  .theme-toggle .dark {
-    font-size: 20px;
-  }
-  
-  .icon {
-    font-size: 24px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    margin-left: 15px;
-  }
-  
-  .profile {
-    position: relative;
-  }
-  
-  .profile-menu {
-    position: absolute;
-    top: 35px;
-    right: 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    display: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .profile-menu a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .profile-menu a:hover {
-    background-color: #f0f0f0;
-  }
-  
-  .profile-btn:hover + .profile-menu,
-  .profile-menu:hover {
-    display: block;
-  }
-  
-  /* Main content styles */
-  main {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  .course-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 0 50px;
-  }
-  
-  .course-card {
-    background-color: #e0e0e0;
-    padding: 40px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  
-  .course-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body Styles */
+body {
+  background-color: #333; /* Updated to match sages.html */
+  color: white; /* Updated to match sages.html */
+  text-align: center; /* Maintained for consistent layout */
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 2px solid #ddd;
+}
+
+.navbar h1 {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.navbar-left, .navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile-menu {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.profile-menu a:hover {
+  background-color: #f0f0f0;
+}
+
+.profile-btn:hover + .profile-menu,
+.profile-menu:hover {
+  display: block;
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* Course Grid Styles */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0 50px;
+}
+
+/* Course Card Styles */
+.course-card {
+  background-color: #e0e0e0;
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.course-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Sages Page Styles */
+.sages-header h1 {
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+.sages-professors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sages-professor {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+  width: 150px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Professor Image Styling */
+.sages-professor img {
+  width: 100%;
+  height: auto;
+  border-radius: 2rem;
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+/* Hover Effect */
+.sages-professor:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+
+.sages-professor:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.sages-professor p {
+  margin: 10px 0 0;
+  font-size: 1rem;
+}
+
+.sages-professor:hover p {
+  color: #ffd700;
+}

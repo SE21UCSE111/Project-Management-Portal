@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sages</title>
+    <link rel="stylesheet" href="style.css"> <!-- Your CSS file -->
+</head>
+<body>
+
+<div class="sages-header">
+    <h1>Sages Page</h1>
+</div>
+
+<div class="sages-professors">
+    <div class="sages-professor" onclick="showProjects('professor1')">
+        <img src="./Images/Avinash.jpg" alt="Professor 1">
+        <p>Avinash</p>
+    </div>
+    <div class="sages-professor" onclick="showProjects('professor2')">
+        <img src="./Images/Bhanukiran.jpg" alt="Professor 2">
+        <p>Bhanukiran</p>
+    </div>
+    <div class="sages-professor" onclick="showProjects('professor2')">
+        <img src="./Images/NidhiGoyal.jpg" alt="Professor 2">
+        <p>Nidhi Goyal</p>
+    </div>
+    <div class="sages-professor" onclick="showProjects('professor2')">
+        <img src="./Images/Prafulla.jpg" alt="Professor 2">
+        <p>Prafulla</p>
+    </div>
+    <!-- Add more professors as needed -->
+</div>
+
+<div class="projects-container" id="projects-container" style="display: none;">
+    <div class="project">
+        <img src="project1.jpg" alt="Project 1">
+        <h3>Project Title 1</h3>
+        <p>Description of project 1.</p>
+        <button>Interested?</button>
+    </div>
+    <div class="project">
+        <img src="project2.jpg" alt="Project 2">
+        <h3>Project Title 2</h3>
+        <p>Description of project 2.</p>
+        <button>Interested?</button>
+    </div>
+    <div class="project">
+        <img src="project3.jpg" alt="Project 3">
+        <h3>Project Title 3</h3>
+        <p>Description of project 3.</p>
+        <button>Interested?</button>
+    </div>
+    <div class="project">
+        <img src="project4.jpg" alt="Project 4">
+        <h3>Project Title 4</h3>
+        <p>Description of project 4.</p>
+        <button>Interested?</button>
+    </div>
+    <!-- Add more projects as needed -->
+</div>
+
+
+<div class="projects-container" id="projects-container" style="display: none;">
+    <div class="project">
+        <img src="project1.jpg" alt="Project 1">
+        <h3>Project Title 1</h3>
+        <p>Description of project 1.</p>
+        <button>Interested?</button>
+    </div>
+    <div class="project">
+        <img src="project2.jpg" alt="Project 2">
+        <h3>Project Title 2</h3>
+        <p>Description of project 2.</p>
+        <button>Interested?</button>
+    </div>
+    <!-- Add more projects as needed -->
+</div>
+
+<script>
+    function showProjects(professorId) {
+        const projectsContainer = document.getElementById('projects-container');
+        projectsContainer.style.display = 'block';
+
+        // Optionally, you can customize which projects to show based on the professorId
+    }
+</script>
+</body>
+</html>
